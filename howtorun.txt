@@ -1,0 +1,2 @@
+step 1: run npm run dev
+step 2: stripe listen --forward-to localhost:3000/api/webhook
