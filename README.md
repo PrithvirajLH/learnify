@@ -16,7 +16,8 @@ Installation
 
 1. Install dependencies:
 npm install
-2. Environment Variables: Create a .env file in the root directory and Set the following environment variables in your .env file:
+
+3. Environment Variables: Create a .env file in the root directory and Set the following environment variables in your .env file:
 	
 # Application
 NEXT_PUBLIC_APP_URL=http://localhost:3000
