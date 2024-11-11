@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-10T06:34:19.489Z",
+    "end": "2024-11-10T06:34:34.149Z",
+    "duration": 14660,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dbbe0475-69e8-4ec7-b26d-3c432353bfbd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-student\\5.courseViewTest.cy.js",
+      "file": "cypress\\e2e\\1-student\\5.courseViewTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8ced11c2-4b58-4ca1-b885-d22f3469e765",
+          "title": "Course Browse",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "browse the course and view course page",
+              "fullTitle": "Course Browse browse the course and view course page",
+              "timedOut": null,
+              "duration": 11525,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Browse\").click();\ncy.get('img[alt=\"Photography\"]').click();\ncy.contains(\"Enroll for\").should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Enroll for' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Enroll for' but never did.\n    at Context.eval (webpack://education_platform/./cypress/e2e/1-student/5.courseViewTest.cy.js:14:30)",
+                "diff": null
+              },
+              "uuid": "57241ca2-bb42-49d6-a571-e02b0bda74cb",
+              "parentUUID": "8ced11c2-4b58-4ca1-b885-d22f3469e765",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "57241ca2-bb42-49d6-a571-e02b0bda74cb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11525,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

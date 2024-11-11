@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-10T06:35:10.074Z",
+    "end": "2024-11-10T06:35:17.744Z",
+    "duration": 7670,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e982e9fb-48d4-4acc-94a6-84f58aab3cf4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-student\\8.dashboardUpdate.cy.js",
+      "file": "cypress\\e2e\\1-student\\8.dashboardUpdate.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bbb309d0-8653-4089-82f5-480f953ea419",
+          "title": "Dashboard Update ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "course dispalyed on student dashboard after purchase",
+              "fullTitle": "Dashboard Update  course dispalyed on student dashboard after purchase",
+              "timedOut": null,
+              "duration": 4757,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.get('img[alt=\"Photography\"]').click();",
+              "err": {},
+              "uuid": "04bcfd5c-bb3e-4971-b767-646ce414aca5",
+              "parentUUID": "bbb309d0-8653-4089-82f5-480f953ea419",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "04bcfd5c-bb3e-4971-b767-646ce414aca5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4757,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-10T06:14:39.486Z",
+    "end": "2024-11-10T06:14:49.874Z",
+    "duration": 10388,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "efdcddd9-bfe3-4f0d-99c2-daff5fca2051",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-student\\6.courseBeforePurchase.cy.js",
+      "file": "cypress\\e2e\\1-student\\6.courseBeforePurchase.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b7820109-d495-44ca-9534-9a182dd5e4e3",
+          "title": "Course Before purchase",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check whether the couse is locked before purchase",
+              "fullTitle": "Course Before purchase check whether the couse is locked before purchase",
+              "timedOut": null,
+              "duration": 7897,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Browse\").click();\ncy.get('img[alt=\"Photography\"]').click();\ncy.contains(\"Enroll for\").should(\"be.visible\");\ncy.contains(\"Module 1\").click();\ncy.contains(\"This chapter is locked.\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "b2523e80-8ab8-44a2-b437-98762f26925e",
+              "parentUUID": "b7820109-d495-44ca-9534-9a182dd5e4e3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b2523e80-8ab8-44a2-b437-98762f26925e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7897,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

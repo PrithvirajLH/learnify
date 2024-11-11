@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-10T06:13:49.436Z",
+    "end": "2024-11-10T06:13:59.439Z",
+    "duration": 10003,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea4dac14-76db-485f-bcb0-2494a04e7240",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-student\\2.signoutTest.cy.js",
+      "file": "cypress\\e2e\\1-student\\2.signoutTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c09ed8d7-eaac-492b-9160-b1cae5a1de29",
+          "title": "Learnify SignOut Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should sign out and it should be redirected to login page",
+              "fullTitle": "Learnify SignOut Test should sign out and it should be redirected to login page",
+              "timedOut": null,
+              "duration": 7505,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\n//cy.get('input[type=\"password\"]', { timeout: 10000 }).should(\"be.visible\");\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Browse\").should(\"be.visible\");\ncy.get(\".cl-avatarImage\").click();\ncy.get(\"button\").contains(\"Sign out\").click();\ncy.contains(\"Sign in to Learnify\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "87809984-d925-4f18-9605-57edd23170af",
+              "parentUUID": "c09ed8d7-eaac-492b-9160-b1cae5a1de29",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "87809984-d925-4f18-9605-57edd23170af"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7505,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

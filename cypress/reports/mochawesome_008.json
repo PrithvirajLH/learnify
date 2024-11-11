@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-10T06:15:34.324Z",
+    "end": "2024-11-10T06:15:57.701Z",
+    "duration": 23377,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea636a66-223b-46b8-b5ea-1ca3aae787ae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\2-teacher\\1.loginTest.cy.js",
+      "file": "cypress\\e2e\\2-teacher\\1.loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8af11fb-afac-41a6-aa2d-2f87d86a6532",
+          "title": "Teacher Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Teacher login, teacher mode button is enabled",
+              "fullTitle": "Teacher Login Teacher login, teacher mode button is enabled",
+              "timedOut": null,
+              "duration": 5241,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Teacher Mode\").click();",
+              "err": {},
+              "uuid": "e9bdc51d-95da-4eae-9908-6ea88b3dc665",
+              "parentUUID": "c8af11fb-afac-41a6-aa2d-2f87d86a6532",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create new course",
+              "fullTitle": "Teacher Login create new course",
+              "timedOut": null,
+              "duration": 5057,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Teacher Mode\").click();\ncy.contains(\"New Course\").click();\ncy.contains(\"Course title\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "a3abce8f-2c6e-4806-b57d-0fd77acada2e",
+              "parentUUID": "c8af11fb-afac-41a6-aa2d-2f87d86a6532",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check if the continue button is disabled if the title is not given",
+              "fullTitle": "Teacher Login Check if the continue button is disabled if the title is not given",
+              "timedOut": null,
+              "duration": 4507,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Teacher Mode\").click();\ncy.contains(\"New Course\").click();\ncy.contains(\"Course title\").should(\"be.visible\");\ncy.get(\"button\").contains(\"Continue\").should(\"be.disabled\");",
+              "err": {},
+              "uuid": "176bc758-2dfe-4782-a45d-d69bdd6bc27b",
+              "parentUUID": "c8af11fb-afac-41a6-aa2d-2f87d86a6532",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check if the continue button is enabled if the title is given",
+              "fullTitle": "Teacher Login Check if the continue button is enabled if the title is given",
+              "timedOut": null,
+              "duration": 5675,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Teacher Mode\").click();\ncy.contains(\"New Course\").click();\ncy.contains(\"Course title\").should(\"be.visible\");\ncy.get(\"input\").type(\"Test1\");\ncy.contains(\"Continue\").click();",
+              "err": {},
+              "uuid": "8551f1f7-33f9-4490-8cc6-024ee7542214",
+              "parentUUID": "c8af11fb-afac-41a6-aa2d-2f87d86a6532",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e9bdc51d-95da-4eae-9908-6ea88b3dc665",
+            "a3abce8f-2c6e-4806-b57d-0fd77acada2e",
+            "176bc758-2dfe-4782-a45d-d69bdd6bc27b",
+            "8551f1f7-33f9-4490-8cc6-024ee7542214"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20480,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-11-10T17:23:31.319Z",
+    "end": "2024-11-10T17:23:45.263Z",
+    "duration": 13944,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "660deae5-f299-4b97-8dd5-2c2802c41961",
+      "title": "",
+      "fullFile": "cypress\\e2e\\2-teacher\\2.courseSetup.cy.js",
+      "file": "cypress\\e2e\\2-teacher\\2.courseSetup.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7bd6d0c1-8775-4368-9d6c-1ca950f21757",
+          "title": "Course Publish",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Course publish button is disabled if the fields are not filled",
+              "fullTitle": "Course Publish Course publish button is disabled if the fields are not filled",
+              "timedOut": null,
+              "duration": 5589,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Teacher Mode\").click();\ncy.get('button[aria-haspopup=\"menu\"]').click();\ncy.contains(\"Edit\").click();\ncy.get(\"button\").contains(\"Publish\").should(\"be.disabled\");",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://learnify-five-navy.vercel.app/__cypress/runner/cypress_runner.js:112355:68)\n    at Context.click (https://learnify-five-navy.vercel.app/__cypress/runner/cypress_runner.js:112522:14)\n    at wrapped (https://learnify-five-navy.vercel.app/__cypress/runner/cypress_runner.js:137935:19)\nFrom Your Spec Code:\n    at Context.eval (webpack://education_platform/./cypress/e2e/2-teacher/2.courseSetup.cy.js:13:43)",
+                "diff": null
+              },
+              "uuid": "9d0f7b1f-2dc0-42d8-b7bf-e924e7153619",
+              "parentUUID": "7bd6d0c1-8775-4368-9d6c-1ca950f21757",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Course publish button is enabled if all the fields are filled",
+              "fullTitle": "Course Publish Course publish button is enabled if all the fields are filled",
+              "timedOut": null,
+              "duration": 4989,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Teacher Mode\").click();\ncy.get('button[aria-haspopup=\"menu\"]').click();\ncy.contains(\"Edit\").last().click();\ncy.contains(\"Edit description\").click();\ncy.get('textarea[name=\"description\"]').type(\"Unlock the power of yoga and embark on a transformative journey toward physical and mental well-being.\");\ncy.contains(\"Save\").click();\ncy.get(\"button\").contains(\"Publish\").click();",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://learnify-five-navy.vercel.app/__cypress/runner/cypress_runner.js:112355:68)\n    at Context.click (https://learnify-five-navy.vercel.app/__cypress/runner/cypress_runner.js:112522:14)\n    at wrapped (https://learnify-five-navy.vercel.app/__cypress/runner/cypress_runner.js:137935:19)\nFrom Your Spec Code:\n    at Context.eval (webpack://education_platform/./cypress/e2e/2-teacher/2.courseSetup.cy.js:25:43)",
+                "diff": null
+              },
+              "uuid": "1c7d8191-f0f0-4392-91c7-731df61947f8",
+              "parentUUID": "7bd6d0c1-8775-4368-9d6c-1ca950f21757",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9d0f7b1f-2dc0-42d8-b7bf-e924e7153619",
+            "1c7d8191-f0f0-4392-91c7-731df61947f8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10578,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

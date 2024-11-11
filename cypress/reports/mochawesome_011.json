@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-10T06:33:23.645Z",
+    "end": "2024-11-10T06:33:39.123Z",
+    "duration": 15478,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a134aeb2-9d95-4b7b-95be-9200f8d5878c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-student\\1.loginTest.cy.js",
+      "file": "cypress\\e2e\\1-student\\1.loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "138f47c5-f450-40aa-b917-344153db9d0f",
+          "title": "Learnify Login Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display all UI elements",
+              "fullTitle": "Learnify Login Page Tests should display all UI elements",
+              "timedOut": null,
+              "duration": 3039,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Check if the main title and elements are visible\ncy.contains(\"Sign in to Learnify\").should(\"be.visible\");\ncy.contains(\"Continue with Google\").should(\"be.visible\");\ncy.contains(\"Email address\").should(\"be.visible\");\ncy.get('input[type=\"text\"]').should(\"be.visible\");\ncy.get(\"button\").contains(\"Continue\").should(\"be.visible\");\ncy.contains(\"Sign up\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "6ea0df1b-1902-47d9-bfd9-e7b24fd4f86e",
+              "parentUUID": "138f47c5-f450-40aa-b917-344153db9d0f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show validation message for invalid email format",
+              "fullTitle": "Learnify Login Page Tests should show validation message for invalid email format",
+              "timedOut": null,
+              "duration": 2616,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Type an invalid email\ncy.get('input[type=\"text\"]').type(\"abc.123\");\ncy.get(\".cl-formButtonPrimary\").click();\n// Check the validation message directly on the input field\ncy.get('input[type=\"text\"]').then($input => {\n  expect($input[0].validationMessage).to.eq(\"Please match the requested format.\");\n});",
+              "err": {},
+              "uuid": "8e53a153-a565-4e59-9032-2687d85fc075",
+              "parentUUID": "138f47c5-f450-40aa-b917-344153db9d0f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show error when email field is empty",
+              "fullTitle": "Learnify Login Page Tests should show error when email field is empty",
+              "timedOut": null,
+              "duration": 1333,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Click continue without entering an email\ncy.get(\".cl-formButtonPrimary\").click();\n// Check if error message is shown\ncy.get('input[type=\"text\"]').then($input => {\n  expect($input[0].validationMessage).to.eq(\"Please fill out this field.\");\n});",
+              "err": {},
+              "uuid": "d897f293-b03a-4bec-9298-80a593d9ac7a",
+              "parentUUID": "138f47c5-f450-40aa-b917-344153db9d0f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should login successfully when authenticated user logs in",
+              "fullTitle": "Learnify Login Page Tests should login successfully when authenticated user logs in",
+              "timedOut": null,
+              "duration": 4464,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=\"text\"]').type(\"abc@gmail.com\");\ncy.get(\".cl-formButtonPrimary\").click();\n//cy.get('input[type=\"password\"]', { timeout: 10000 }).should(\"be.visible\");\ncy.get('input[type=\"password\"]').type(\"Prithvi@1241\");\ncy.get(\"button\").contains(\"Continue\").click();\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Browse\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "97aef4f0-14b6-4369-a185-cd00861c4d66",
+              "parentUUID": "138f47c5-f450-40aa-b917-344153db9d0f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ea0df1b-1902-47d9-bfd9-e7b24fd4f86e",
+            "8e53a153-a565-4e59-9032-2687d85fc075",
+            "d897f293-b03a-4bec-9298-80a593d9ac7a",
+            "97aef4f0-14b6-4369-a185-cd00861c4d66"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11452,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
