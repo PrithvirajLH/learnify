@@ -1,34 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Learnify
 
-## Getting Started
+Learnify is a Learning Management System (LMS) platform designed to offer a smooth learning process, course production, and dissemination. Learnify, which was developed with Next.js, Clerk, Prisma, Mux, Stripe, and other powerful tools, allows students to access organized, excellent courses and teachers to exchange knowledge.
 
-First, run the development server:
+Getting Started
+To get a local copy of Learnify up and running, follow these steps.
 
-```bash
+Prerequisites
+Ensure you have the following installed:
+
+Node.js (v16 or later)
+npm or yarn (for package management)
+MySQL (for the database)
+
+Installation
+
+1. Install dependencies:
+npm install
+2. Environment Variables: Create a .env file in the root directory and Set the following environment variables in your .env file:
+	
+# Application
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# Clerk
+NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api
+CLERK_API_KEY=your_clerk_api_key
+
+# Prisma
+DATABASE_URL=mysql://username:password@localhost:3306/learnify
+
+# Mux
+MUX_TOKEN_ID=your_mux_token_id
+MUX_TOKEN_SECRET=your_mux_token_secret
+
+# UploadThing
+UPLOADTHING_SECRET=your_uploadthing_secret
+
+# Stripe
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+STRIPE_SECRET_KEY=your_stripe_secret_key
+
+	
+3. Run the Prisma migrations:
+npx prisma migrate dev
+
+4. Start the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Connect stripe using the following code:
+stripe listen --forward-to localhost:3000/api/webhook 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Database Schema
+Here's an overview of the main models used in Prisma:
 
-## Learn More
+Course: Stores course information (title, description, image, price, etc.).
+Category: Classifies courses into different categories.
+Attachment: Stores information on files attached to courses.
+Chapter: Represents sections within a course.
+MuxData: Stores Mux video IDs and related data for streaming.
+UserProgress: Tracks each user’s progress in a course.
+Purchase: Records user purchases of courses.
+StripeCustomer: Stores Stripe customer IDs for payment integration.
+Refer to prisma/schema.prisma for detailed fields and relationships.
 
-To learn more about Next.js, take a look at the following resources:
+Deployment
+This project is deployed using Vercel, ensuring high availability, scalability, and efficient performance. You can access the live version of the website using the following URL:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://learnify-five-navy.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
