@@ -63,6 +63,13 @@ Purchase: Records user purchases of courses.
 StripeCustomer: Stores Stripe customer IDs for payment integration.
 Refer to prisma/schema.prisma for detailed fields and relationships.
 
+# Teacher Mode Access
+
+To create, modify, and delete courses, you can use the following credentials to access teacher mode:
+
+Email: abc@gmail.com
+Password: Learnify@1241
+
 # Deployment
 This project is deployed using Vercel, ensuring high availability, scalability, and efficient performance. You can access the live version of the website using the following URL:
 
